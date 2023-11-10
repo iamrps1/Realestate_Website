@@ -1,32 +1,8 @@
 <?php
 
-$first = "Real Hai Mai";
+$nameContainer = 'Rishabh\'s Realstate';
 
-$nameContainer = 'Rishabh ' . $first . ' Realstate';
-
-$dataSet = [[
-   "circle" => "I",
-   "name" => "IAMRPS",
-   "date" => "10-11-2024",
-   "no-of-images" => 4,
-   "propertyType" => "house",
-   "title" => "modern flats and appartments",
-   "address" => "andheri, mumbai, india - 401303",
-   "bed" => 3,
-   "bath" => 2,
-   "area" => 750
-], [
-   "circle" => "R",
-   "name" => "Raja",
-   "date" => "16-10-2025",
-   "no-of-images" => 3,
-   "propertyType" => "Flat",
-   "title" => "So beatiful so eligant just wow",
-   "address" => "Chinhat lucknow - 226028",
-   "bed" => 5,
-   "bath" => 3,
-   "area" => 1200
-],];
+include 'includes/dataSet.php';
 ?>
 
 <!DOCTYPE html>
@@ -78,16 +54,16 @@ $dataSet = [[
                   <form action="" method="post" class="save">
                      <button type="submit" name="save" class="far fa-heart"></button>
                   </form>
-                  <img src="images/house-img-1.webp" alt="">
+                  <img src="images/<?php echo $dataSet[$i]['property-image'] ?>" alt="">
                </div>
                <h3 class="name"><?php echo $dataSet[$i]["title"]; ?></h3>
                <p class="location"><i class="fas fa-map-marker-alt"></i><span><?php echo $dataSet[$i]["address"]; ?></span></p>
                <div class="flex">
-                  <p><i class="fas fa-bed"></i><span><?php echo $dataSet[$i]["bed"]; ?></span></p>
-                  <p><i class="fas fa-bath"></i><span><?php echo $dataSet[$i]["bath"]; ?></span></p>
-                  <p><i class="fas fa-maximize"></i><span><?php echo $dataSet[$i]["area"]; ?>sqft</span></p>
+                  <p><i class="fas fa-bed"></i><span><?php echo $dataSet[$i]["details"]["bed"]; ?></span></p>
+                  <p><i class="fas fa-bath"></i><span><?php echo $dataSet[$i]["details"]["bath"]; ?></span></p>
+                  <p><i class="fas fa-maximize"></i><span><?php echo $dataSet[$i]["details"]["carpet-area"]; ?>sqft</span></p>
                </div>
-               <a href="view_property.php" class="btn">view property</a>
+               <a href="view_property.php?id=<?php echo $i; ?>" class="btn">view property</a>
             </div>
 
          <?php } ?>
