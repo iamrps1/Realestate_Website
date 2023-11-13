@@ -2,7 +2,7 @@
 
     <nav class="navbar nav-1">
         <section class="flex">
-            <a href="home.html" class="logo"><i class="fas fa-house"></i>MyHome</a>
+            <a href="home.php" class="logo"><i class="fas fa-house"></i>MyHome</a>
 
             <ul>
                 <li><a href="#">post property<i class="fas fa-paper-plane"></i></a></li>
@@ -40,9 +40,9 @@
                     </li>
                     <li><a href="#">help<i class="fas fa-angle-down"></i></a>
                         <ul>
-                            <li><a href="about.html">about us</a></i></li>
-                            <li><a href="contact.html">contact us</a></i></li>
-                            <li><a href="contact.html#faq">FAQ</a></i></li>
+                            <li><a href="about.php">about us</a></i></li>
+                            <li><a href="contact.php">contact us</a></i></li>
+                            <li><a href="contact.php#faq">FAQ</a></i></li>
                         </ul>
                     </li>
                 </ul>
