@@ -4,7 +4,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Login</title>
+   <title>Register</title>
 
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
@@ -83,21 +83,23 @@
 
 <!-- header section ends -->
 
-<!-- login section starts  -->
+<!-- register section starts  -->
 
 <section class="form-container">
 
    <form action="" method="post">
-      <h3>welcome back!</h3>
+      <h3>create an account!</h3>
+      <input type="tel" name="name" required maxlength="50" placeholder="enter your name" class="box">
       <input type="email" name="email" required maxlength="50" placeholder="enter your email" class="box">
       <input type="password" name="pass" required maxlength="20" placeholder="enter your password" class="box">
-      <p>don't have an account? <a href="register.html">register new</a></p>
-      <input type="submit" value="login now" name="submit" class="btn">
+      <input type="password" name="c_pass" required maxlength="20" placeholder="confirm your password" class="box">
+      <p>already have an account? <a href="login.html">Login now</a></p>
+      <input type="submit" value="register now" name="submit" class="btn">
    </form>
 
 </section>
 
-<!-- login section ends -->
+<!-- register section ends -->
 
 
 

@@ -52,8 +52,8 @@
                 <li><a href="#">saved <i class="far fa-heart"></i></a></li>
                 <li><a href="#">account <i class="fas fa-angle-down"></i></a>
                     <ul>
-                        <li><a href="login.html">login</a></li>
-                        <li><a href="register.html">register</a></li>
+                        <li><a href="login.php">login</a></li>
+                        <li><a href="register.php">register</a></li>
                     </ul>
                 </li>
             </ul>
