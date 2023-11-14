@@ -139,3 +139,43 @@ $dataSet = [[
     "bath" => 2,
     "area" => 800
 ]];
+
+$review=[[
+    "name" => "RHVS",
+    "image" => "pic-1.png",
+    "rating" => 4.5,
+    "review" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci voluptates delectus distinctio quam sequi error eum suscipit tempore inventore ex!",
+
+],[
+    "name" => "ROCKY RPS",
+    "image" => "pic-2.png",
+    "rating" => 5,
+    "review" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci voluptates delectus distinctio quam sequi error eum suscipit tempore inventore ex!",
+
+],[
+    "name" => "PRAKHAR",
+    "image" => "pic-3.png",
+    "rating" => 3.5,
+    "review" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci voluptates delectus distinctio quam sequi error eum suscipit tempore inventore ex!",
+
+],[
+    "name" => "RITIK",
+    "image" => "pic-4.png",
+    "rating" => 3,
+    "review" => "Lorem ipsum dolr, sit amet consectetur adipisicing elit. Adipisci voluptates delectus distinctio quam sequi error eum suscipit tempore inventore ex!",
+
+],[
+    "name" => "RISHABH PRATATP SINGH",
+    "image" => "pic-5.png",
+    "rating" => 4,
+    "review" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci voluptates delectus distinctio quam sequi error eum suscipit tempore inventore ex!",
+
+],[
+    "name" => "PUNEET SINGH",
+    "image" => "pic-6.png",
+    "rating" => 2.5,
+    "review" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci voluptates delectus distinctio quam sequi error eum suscipit tempore inventore ex!",
+
+]];
+
+
