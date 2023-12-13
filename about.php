@@ -1,3 +1,9 @@
+<?php include 'includes/dataSet.php';
+
+function is_decimal( $val )
+{
+    return is_numeric( $val ) && floor( $val ) != $val;
+} ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -72,114 +78,66 @@
 
    <!-- review section starts  -->
 
+   
+
+
    <section class="reviews">
 
       <h1 class="heading">client's reviews</h1>
 
       <div class="box-container">
 
-         <div class="box">
-            <div class="user">
-               <img src="images/pic-1.png" alt="">
-               <div>
-                  <h3>SINGHO PUNEET</h3>
-                  <div class="stars">
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star-half-alt"></i>
-                  </div>
-               </div>
-            </div>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci voluptates delectus distinctio quam sequi error eum suscipit tempore inventore ex!</p>
-         </div>
+      <?php for ($i = 0; $i < count($review); $i++) { ?>
+
 
          <div class="box">
             <div class="user">
-               <img src="images/pic-2.png" alt="">
+               <img src="images/<?php echo $review[$i]['image'] ?>"alt="">
                <div>
-                  <h3>ROCKY RPS</h3>
+                  <h3><?php echo $review[$i]["name"]; ?></h3>
                   <div class="stars">
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star-half-alt"></i>
+                     <?php   
+                  if(is_decimal($review[$i]['rating'])){
+                     $fstar=floor($review[$i]['rating']);
+                     $estar=5-$fstar-1;
+                     for($j=0;$j<$fstar;$j++){
+                        echo '<i class="fas fa-star"></i>';
+                     }
+                     echo' <i class="fas fa-star-half-alt"></i>';
+                     for($k=0;$k<$estar;$k++){
+                        echo'<i class="fa-regular fa-star"></i>';
+                     }
+                  }
+                  else{
+                     $fstar=$review[$i]['rating'];
+                     $estar=5-$fstar;
+                     for($j=0;$j<$fstar;$j++){
+                        echo '<i class="fas fa-star"></i>';
+                     }
+                     for($k=0;$k<$estar;$k++){
+                        echo'<i class="fa-regular fa-star"></i>';
+                     }
+
+                  }
+                  
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     ?>
+                     
+                     
+                    
                   </div>
                </div>
             </div>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci voluptates delectus distinctio quam sequi error eum suscipit tempore inventore ex!</p>
+            <p><?php echo $review[$i]['review'] ?></p>
          </div>
 
-         <div class="box">
-            <div class="user">
-               <img src="images/pic-3.png" alt="">
-               <div>
-                  <h3>PUNEET</h3>
-                  <div class="stars">
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star-half-alt"></i>
-                  </div>
-               </div>
-            </div>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci voluptates delectus distinctio quam sequi error eum suscipit tempore inventore ex!</p>
-         </div>
-
-         <div class="box">
-            <div class="user">
-               <img src="images/pic-4.png" alt="">
-               <div>
-                  <h3>RISHABH</h3>
-                  <div class="stars">
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star-half-alt"></i>
-                  </div>
-               </div>
-            </div>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci voluptates delectus distinctio quam sequi error eum suscipit tempore inventore ex!</p>
-         </div>
-
-         <div class="box">
-            <div class="user">
-               <img src="images/pic-5.png" alt="">
-               <div>
-                  <h3>RISHABH PRATAP SINGH</h3>
-                  <div class="stars">
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star-half-alt"></i>
-                  </div>
-               </div>
-            </div>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci voluptates delectus distinctio quam sequi error eum suscipit tempore inventore ex!</p>
-         </div>
-
-         <div class="box">
-            <div class="user">
-               <img src="images/pic-6.png" alt="">
-               <div>
-                  <h3>PUNEET SINGH</h3>
-                  <div class="stars">
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star-half-alt"></i>
-                  </div>
-               </div>
-            </div>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci voluptates delectus distinctio quam sequi error eum suscipit tempore inventore ex!</p>
-         </div>
-
+         <?php } ?>
       </div>
 
    </section>
