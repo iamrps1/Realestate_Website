@@ -1,3 +1,20 @@
+<?php 
+session_start();
+
+if (isset($_POST['submit'])) {
+
+   
+   $email = $_POST['email'];
+   $pass = $_POST['pass'];
+   
+
+   if (  $email === $_SESSION['email'] && $pass === $_SESSION['pass']) {
+      $_SESSION['loginSuccess'] = 1;
+      header("Location: home.php");
+
+   }
+
+}?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,7 +39,7 @@
    <section class="form-container">
 
       <form action="" method="post">
-         <h3>welcome back!</h3>
+         <h3>Welcome back!</h3>
          <input type="email" name="email" required maxlength="50" placeholder="enter your email" class="box">
          <input type="password" name="pass" required maxlength="20" placeholder="enter your password" class="box">
          <p>don't have an account? <a href="register.html">register new</a></p>
